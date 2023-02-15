@@ -33,6 +33,14 @@ repositories {
 }
 
 dependencies {
+    runtimeOnly("io.grpc:grpc-netty-shaded:1.53.0")
+    implementation("io.grpc:grpc-protobuf:1.53.0")
+    implementation("io.grpc:grpc-stub:1.53.0")
+    implementation("io.grpc:grpc-kotlin-stub:1.3.0")
+    implementation("com.google.protobuf:protobuf-kotlin:3.21.12")
+    implementation("com.google.protobuf:protobuf-java:3.21.12")
+    compileOnly("org.apache.tomcat:annotations-api:6.0.53") // necessary for Java 9+
+
     // Use the Kotlin JUnit 5 integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 
